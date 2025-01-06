@@ -6,6 +6,6 @@ namespace Kreta.Desktop.Service
 {
     public interface IStudentService
     {
-        public Task<List<Student>> SelectAllStudent();
+        public Task<List<Student>> GetAllStudent();
     }
 }

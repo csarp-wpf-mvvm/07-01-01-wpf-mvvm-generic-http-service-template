@@ -23,7 +23,7 @@ namespace Kreta.Desktop.Service
             
         }
 
-        public async Task<List<Student>> SelectAllStudent()
+        public async Task<List<Student>> GetAllStudent()
         {
 
             List<Student>? result = await _httpClient.GetFromJsonAsync<List<Student>>("api/Student");
