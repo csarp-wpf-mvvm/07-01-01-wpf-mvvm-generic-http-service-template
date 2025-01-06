@@ -2,8 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using Kreta.Desktop.Service;
 using Kreta.Desktop.ViewModels.Base;
-using Kreta.Desktop.ViewModels.SchoolCitizens;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Kreta.Desktop.ViewModels.SchoolCitizens

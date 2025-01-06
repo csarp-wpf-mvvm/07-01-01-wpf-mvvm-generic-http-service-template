@@ -8,24 +8,27 @@ namespace Kreta.Desktop.Service
 {
     public class StudentService : IStudentService
     {
-        private readonly HttpClient? _httpClient;
+        private readonly HttpClient _httpClient;
 
+        public StudentService()
+        {
+            _httpClient = new HttpClient();
+        }
         public StudentService(IHttpClientFactory? httpClientFactory)
         {
             if (httpClientFactory is not null)
-            {
                 _httpClient = httpClientFactory.CreateClient("KretaApi");
-            }
+            else
+                _httpClient = new HttpClient();
+            
         }
 
         public async Task<List<Student>> SelectAllStudent()
         {
-            if (_httpClient is object)
-            {
-                List<Student>? result = await _httpClient.GetFromJsonAsync<List<Student>>("api/Student");
-                if (result is object)
-                    return result;
-            }
+
+            List<Student>? result = await _httpClient.GetFromJsonAsync<List<Student>>("api/Student");
+            if (result is object)
+                return result;
             return new List<Student>();
         }
     }

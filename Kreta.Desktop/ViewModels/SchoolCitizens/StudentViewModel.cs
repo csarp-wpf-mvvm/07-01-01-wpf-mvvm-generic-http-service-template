@@ -1,18 +1,18 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Kreta.Desktop.Models;
+
 using Kreta.Desktop.Service;
 using Kreta.Desktop.ViewModels.Base;
 using Kreta.Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
 namespace Kreta.Desktop.ViewModels.SchoolCitizens
 {
-    public partial class StudentViewModel : BaseViewModelWithAsyncInitialization
+    public partial class StudentViewModel : BaseViewModel
     {        
-        private readonly IStudentService? _studentService;
+        private readonly IStudentService _studentService;
 
         [ObservableProperty]
         private ObservableCollection<string> _educationLevels = new ObservableCollection<string>(new EducationLevels().AllEducationLevels);
@@ -36,37 +36,17 @@ namespace Kreta.Desktop.ViewModels.SchoolCitizens
 
         public StudentViewModel()
         {
+            _studentService = new StudentService();
             SelectedStudent = new Student();
             SelectedEducationLevel = _educationLevels[0];
         }
 
         public StudentViewModel(IStudentService? studentService)
         {
-            //Students.Add(new Student("Elek", "Teszt", System.DateTime.Now, 9, SchoolClassType.ClassA, ""));
+            _studentService = studentService ?? throw new ArgumentNullException(nameof(studentService));
             SelectedStudent = new Student();
             SelectedEducationLevel = _educationLevels[0];
 
-            _studentService = studentService;
-        }
-
-        [RelayCommand]
-        public void DoSave(Student newStudent)
-        {
-            Students.Add(newStudent);
-            OnPropertyChanged(nameof(Students));
-        }
-
-        [RelayCommand]
-        void DoNewStudent()
-        {
-            SelectedStudent = new Student();
-        }
-
-        [RelayCommand]
-        public void DoRemove(Student studentToDelete)
-        {
-            Students.Remove(studentToDelete);
-            OnPropertyChanged(nameof(Students));
         }
 
         public override async Task InitializeAsync()
