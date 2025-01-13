@@ -1,4 +1,4 @@
-﻿namespace Kreta.Desktop.Models
+﻿namespace KretaBasicSchoolSystem.Desktop.Models
 {
     public class UserAccount
     {

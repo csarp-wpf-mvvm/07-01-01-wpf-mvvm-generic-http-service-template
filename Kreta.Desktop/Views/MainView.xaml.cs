@@ -5,7 +5,7 @@ using System.Windows.Input;
 using System.Windows.Interop;
 
 
-namespace Kreta.Desktop.Views
+namespace KretaBasicSchoolSystem.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for MainView.xaml

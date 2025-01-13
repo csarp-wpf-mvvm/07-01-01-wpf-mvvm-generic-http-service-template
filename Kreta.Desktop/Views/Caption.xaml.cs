@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kreta.Desktop.Views
+namespace KretaBasicSchoolSystem.Desktop.Views
 {
     /// <summary>
     /// Interaction logic for Caption.xaml

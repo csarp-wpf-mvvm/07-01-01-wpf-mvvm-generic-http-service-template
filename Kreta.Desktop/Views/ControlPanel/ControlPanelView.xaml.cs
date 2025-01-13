@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kreta.Desktop.Views.ControlPanel
+namespace KretaBasicSchoolSystem.Desktop.Views.ControlPanel
 {
     /// <summary>
     /// Interaction logic for ControlPanelView.xaml

@@ -1,6 +1,6 @@
-﻿using Kreta.Desktop.ViewModels.Base;
+﻿using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 
-namespace Kreta.Desktop.ViewModels.SchoolGrades
+namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
 {
     public class ClosingEndOfYearGradeViewModel : BaseViewModel
     {

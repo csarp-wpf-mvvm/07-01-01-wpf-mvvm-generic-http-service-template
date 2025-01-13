@@ -1,11 +1,11 @@
-﻿using Kreta.Shared.Models;
+﻿using KretaBasicSchoolSystem.Desktop.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Kreta.Desktop.Service
+namespace KretaBasicSchoolSystem.Desktop.Service
 {
     public interface IStudentService
     {
-        public Task<List<Student>> GetAllStudent();
+        public Task<List<Student>> SelectAllStudent();
     }
 }

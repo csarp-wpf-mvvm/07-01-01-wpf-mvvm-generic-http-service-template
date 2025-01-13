@@ -12,12 +12,10 @@
         <Setter Property="AlternatingRowBackground" Value="{StaticResource backgroundColorFourth}"></Setter>
         <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"></Setter>
     </Style>
-
     <Style TargetType="{x:Type DataGridColumnHeader}" x:Key="DataGridCRUDHeaderStyle">
         <Setter Property="Background" Value="{StaticResource backgroundPrimaryColor}"></Setter>
         <Setter Property="Foreground" Value="{StaticResource plainTextColor3}"></Setter>
         <Setter Property="FontSize" Value="14"></Setter>
         <Setter Property="FontWeight" Value="Medium"></Setter>
     </Style>
-
 </ResourceDictionary>

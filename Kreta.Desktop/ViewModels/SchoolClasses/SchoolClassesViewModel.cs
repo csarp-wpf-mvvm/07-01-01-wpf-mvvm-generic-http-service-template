@@ -1,6 +1,6 @@
-﻿using Kreta.Desktop.ViewModels.Base;
+﻿using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
 
-namespace Kreta.Desktop.ViewModels.SchoolClasses
+namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses
 {
     public class SchoolClassesViewModel : BaseViewModel
     {

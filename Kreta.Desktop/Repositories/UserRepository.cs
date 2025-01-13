@@ -1,8 +1,8 @@
-﻿using Kreta.Desktop.Models;
+﻿using KretaBasicSchoolSystem.Desktop.Models;
 using System;
 using System.Net;
 
-namespace Kreta.Desktop.Repositories
+namespace KretaBasicSchoolSystem.Desktop.Repositories
 {
     public class UserRepository
     {
@@ -14,14 +14,14 @@ namespace Kreta.Desktop.Repositories
 
         public User? GetByUsername(string userName)
         {
-            return new User
-            {
-                Username = "teszt",
-                Email = "teszt@teszt.hu",
-                FirstName = "Elek",
-                LastName = "Teszt",
-                Password = "test@123"
-            };
+             return new User
+             {
+                 Username = "teszt",
+                 Email = "teszt@teszt.hu",
+                 FirstName = "Elek",
+                 LastName = "Teszt",
+                 Password = "test@123"
+             };
         }
     }
 }

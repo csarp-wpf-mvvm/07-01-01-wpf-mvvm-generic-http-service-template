@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kreta.Desktop.Views.SchoolGrades
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolGrades
 {
     /// <summary>
     /// Interaction logic for TanitottOsztalyokView.xaml

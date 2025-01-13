@@ -1,12 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Kreta.Desktop.Repositories;
+using KretaBasicSchoolSystem.Desktop.Repositories;
 using System.Net;
 using System.Security;
 using System.Security.Principal;
 using System.Threading;
 
-namespace Kreta.Desktop.ViewModels.Login
+namespace KretaBasicSchoolSystem.Desktop.ViewModels.Login
 {
     partial class LoginViewModel : ObservableObject
     {

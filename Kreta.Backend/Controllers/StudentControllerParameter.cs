@@ -1,0 +1,17 @@
+﻿using Kreta.Backend.Controllers.Base;
+using Kreta.Shared.Dtos;
+using Kreta.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Kreta.Backend.Controllers
+{
+    public partial class StudentController : BaseController<Shared.Models.Student, Shared.Dtos.StudentDto>
+    {
+
+        [HttpGet("getstudentbyfullname")]
+        public async Task<IActionResult> GetStudentByFullName([FromQuery] FullNameQueryDto fullNameDto)
+        {
+            return Ok(await _studentRepo.GetByNameAsync(fullNameDto.FirstName, fullNameDto.LastName));
+        }
+    }
+}

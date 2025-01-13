@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 
 
-namespace Kreta.Desktop.Views.SchoolGrades
+namespace KretaBasicSchoolSystem.Desktop.Views.SchoolGrades
 {
     /// <summary>
     /// Interaction logic for SchoolOsztalyzatokMenu.xaml

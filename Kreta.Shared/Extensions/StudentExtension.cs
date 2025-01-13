@@ -5,11 +5,11 @@ namespace Kreta.Shared.Extensions
 {
     public static class StudentExtension
     {
-        public static StudentDto ToStudentDto(this Student student)
+        public static Dtos.StudentDto ToStudentDto(this Models.Student student)
         {
-            return new StudentDto
+            return new Dtos.StudentDto
             {
-                Id=student.Id,
+                Id= student.Id,
                 FirstName = student.FirstName,
                 LastName = student.LastName,
                 BirthsDay = student.BirthsDay,
@@ -19,9 +19,9 @@ namespace Kreta.Shared.Extensions
             };
         }
 
-        public static Student ToStudent(this StudentDto studentdto) 
+        public static Models.Student ToStudent(this Dtos.StudentDto studentdto) 
         {
-            return new Student
+            return new Models.Student
             {
                 Id = studentdto.Id,
                 FirstName = studentdto.FirstName,

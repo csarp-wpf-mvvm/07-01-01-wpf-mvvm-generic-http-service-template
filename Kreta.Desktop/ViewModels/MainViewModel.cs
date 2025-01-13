@@ -1,14 +1,14 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FontAwesome.Sharp;
-using Kreta.Desktop.ViewModels.Base;
-using Kreta.Desktop.ViewModels.ControlPanel;
-using Kreta.Desktop.ViewModels.SchoolClasses;
-using Kreta.Desktop.ViewModels.SchoolCitizens;
-using Kreta.Desktop.ViewModels.SchoolGrades;
-using Kreta.Desktop.ViewModels.SchoolSubjects;
+using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+using KretaBasicSchoolSystem.Desktop.ViewModels.ControlPanel;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolClasses;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades;
+using KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects;
 
-namespace Kreta.Desktop.ViewModels
+namespace KretaBasicSchoolSystem.Desktop.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
