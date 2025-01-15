@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace KretaBasicSchoolSystem.Desktop.Extensions
+namespace Kreta.Desktop.Extensions
 {
     public static class HttpCliensExtension
     {

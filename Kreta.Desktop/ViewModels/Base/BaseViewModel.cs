@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.Base
+namespace Kreta.Desktop.ViewModels.Base
 {
     public  abstract class BaseViewModel : ObservableObject
     {

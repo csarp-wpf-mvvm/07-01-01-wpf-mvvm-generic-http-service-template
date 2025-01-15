@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.Base
+namespace Kreta.Desktop.ViewModels.Base
 {
     public class BaseViewModelWithAsyncInitialization : BaseViewModel, IAsyncInitialization
     {

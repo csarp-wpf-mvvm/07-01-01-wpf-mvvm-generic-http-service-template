@@ -1,7 +1,7 @@
-﻿using KretaBasicSchoolSystem.Desktop.Service;
+﻿using Kreta.Desktop.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KretaBasicSchoolSystem.Desktop.Extensions
+namespace Kreta.Desktop.Extensions
 {
     public static class ApiServiceExtensions
     {

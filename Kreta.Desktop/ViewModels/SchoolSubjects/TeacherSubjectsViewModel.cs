@@ -1,6 +1,6 @@
-﻿using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+﻿using Kreta.Desktop.ViewModels.Base;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolSubjects
+namespace Kreta.Desktop.ViewModels.SchoolSubjects
 {
     public class TeacherSubjectsViewModel : BaseViewModel
     {

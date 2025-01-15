@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using KretaBasicSchoolSystem.Desktop.Service;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+using Kreta.Desktop.Service;
+using Kreta.Desktop.ViewModels.Base;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
+namespace Kreta.Desktop.ViewModels.SchoolCitizens
 {
     public partial class SchoolCitizensViewModel : BaseViewModel
     {

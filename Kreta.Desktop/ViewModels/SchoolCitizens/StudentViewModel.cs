@@ -1,13 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using KretaBasicSchoolSystem.Desktop.Models;
-using KretaBasicSchoolSystem.Desktop.Service;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+using Kreta.Desktop.Models;
+using Kreta.Desktop.Service;
+using Kreta.Desktop.ViewModels.Base;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolCitizens
+namespace Kreta.Desktop.ViewModels.SchoolCitizens
 {
     public partial class StudentViewModel : BaseViewModelWithAsyncInitialization
     {        

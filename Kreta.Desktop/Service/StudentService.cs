@@ -1,10 +1,10 @@
-﻿using KretaBasicSchoolSystem.Desktop.Models;
+﻿using Kreta.Desktop.Models;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.Service
+namespace Kreta.Desktop.Service
 {
     public class StudentService : IStudentService
     {

@@ -1,8 +1,8 @@
-﻿using KretaBasicSchoolSystem.Desktop.Models;
+﻿using Kreta.Desktop.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.Service
+namespace Kreta.Desktop.Service
 {
     public interface IStudentService
     {

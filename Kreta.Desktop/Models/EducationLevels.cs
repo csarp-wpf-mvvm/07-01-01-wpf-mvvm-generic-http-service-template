@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KretaBasicSchoolSystem.Desktop.Models
+namespace Kreta.Desktop.Models
 {
     public class EducationLevels
     {

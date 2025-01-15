@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using KretaBasicSchoolSystem.Desktop.Models;
-using KretaBasicSchoolSystem.Desktop.Repositories;
+using Kreta.Desktop.Models;
+using Kreta.Desktop.Repositories;
 using System.Threading;
 
-namespace KretaBasicSchoolSystem.Controls.ViewModels
+namespace Kreta.Controls.ViewModels
 {
     public partial class UserOptionControlViewModel : ObservableObject
     {

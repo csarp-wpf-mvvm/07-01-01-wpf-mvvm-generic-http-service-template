@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using KretaBasicSchoolSystem.Desktop.ViewModels.Base;
+using Kreta.Desktop.ViewModels.Base;
 
-namespace KretaBasicSchoolSystem.Desktop.ViewModels.SchoolGrades
+namespace Kreta.Desktop.ViewModels.SchoolGrades
 {
     public partial class SchoolGradeViewModel : BaseViewModel
     {

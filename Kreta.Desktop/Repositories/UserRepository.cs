@@ -1,8 +1,8 @@
-﻿using KretaBasicSchoolSystem.Desktop.Models;
+﻿using Kreta.Desktop.Models;
 using System;
 using System.Net;
 
-namespace KretaBasicSchoolSystem.Desktop.Repositories
+namespace Kreta.Desktop.Repositories
 {
     public class UserRepository
     {
