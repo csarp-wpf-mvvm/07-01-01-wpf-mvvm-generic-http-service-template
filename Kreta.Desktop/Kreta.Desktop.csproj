@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\csarp\kreta-basic-school-system\07-01-01-wpf-mvvm-generic-http-service-template\Kreta.Shared\Kreta.Shared.csproj" />
+    <ProjectReference Include="..\Kreta.Shared\Kreta.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
