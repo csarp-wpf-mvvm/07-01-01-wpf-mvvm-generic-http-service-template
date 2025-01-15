@@ -1,4 +1,4 @@
-﻿using Kreta.Desktop.Models;
+﻿using Kreta.Shared.Models;
 using System;
 using System.Net;
 

@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="/Styles/IconButton.xaml"/>
                 <ResourceDictionary Source="/Styles/SubMenuButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Styles/DataGridStyling.xaml"/>
+                <ResourceDictionary Source="/Styles/AppStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

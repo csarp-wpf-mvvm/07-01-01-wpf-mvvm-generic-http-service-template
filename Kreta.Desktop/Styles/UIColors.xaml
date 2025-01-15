@@ -4,7 +4,7 @@
     <SolidColorBrush x:Key="StandardButtonEnabled" Color="#01CB11"></SolidColorBrush>
     <SolidColorBrush x:Key="StandardButtonNotEnabled" Color="Red"></SolidColorBrush>
     <SolidColorBrush x:Key="StandardButtonFocused" Color="#EEEEFF"></SolidColorBrush>
-        <!--Background Colors-->
+    <!--Background Colors-->
     <SolidColorBrush x:Key="backgroundPrimaryColor" Color="#3D98A3"/>
     <SolidColorBrush x:Key="backgroundSecondaryColor" Color="#01CB33"/>
     <SolidColorBrush x:Key="backgroundColorThird" Color="#6D92A3"/>
@@ -44,5 +44,5 @@
     <!--Button Colors-->
     <!--TextBox Colors-->
     <!--Etc-->
-    
+
 </ResourceDictionary>

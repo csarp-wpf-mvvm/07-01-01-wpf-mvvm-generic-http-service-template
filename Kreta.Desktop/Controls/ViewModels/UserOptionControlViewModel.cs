@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Kreta.Desktop.Models;
+using Kreta.Shared.Models;
 using Kreta.Desktop.Repositories;
 using System.Threading;
 

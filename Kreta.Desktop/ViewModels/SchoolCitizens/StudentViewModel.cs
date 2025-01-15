@@ -1,78 +1,57 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Kreta.Desktop.Models;
 using Kreta.Desktop.ViewModels.Base;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+using System;
+using Kreta.Shared.Models;
+using Kreta.Shared.Dtos;
+using System.Linq;
 
 namespace Kreta.Desktop.ViewModels.SchoolCitizens
 {
-    public partial class StudentViewModel : BaseViewModelWithAsyncInitialization
-    {        
+    public partial class StudentViewModel : BaseViewModel
+    {
+        [ObservableProperty]
+        private Student _selectedStudent = new Student();
 
         [ObservableProperty]
-        private ObservableCollection<string> _educationLevels = new ObservableCollection<string>(new EducationLevels().AllEducationLevels);
+        private List<string> _educationLevels = new List<string> { "érettségi", "szakmai érettségi", "szakmai vizsga" };
 
         [ObservableProperty]
+
         private ObservableCollection<Student> _students = new ObservableCollection<Student>();
-
-        [ObservableProperty]
-        private Student _selectedStudent;
-
-        private string _selectedEducationLevel = string.Empty;
-        public string SelectedEducationLevel
-        {
-            get => _selectedEducationLevel;
-            set
-            {
-                SetProperty(ref _selectedEducationLevel, value);
-                SelectedStudent.EducationLevel = _selectedEducationLevel;
-            }
-        }
 
         public StudentViewModel()
         {
-            SelectedStudent = new Student();
-            SelectedEducationLevel = _educationLevels[0];
-        }
-
-        public StudentViewModel(IStudentService? studentService)
-        {
-            //Students.Add(new Student("Elek", "Teszt", System.DateTime.Now, 9, SchoolClassType.ClassA, ""));
-            SelectedStudent = new Student();
-            SelectedEducationLevel = _educationLevels[0];
-
-            _studentService = studentService;
+            _selectedStudent = new Student();
+            SelectedStudent.BirthsDay = DateTime.Now.AddYears(-14);
         }
 
         [RelayCommand]
-        public void DoSave(Student newStudent)
+        public void DoSave(Student studentDto)
         {
-            Students.Add(newStudent);
-            OnPropertyChanged(nameof(Students));
-        }
+            Students.Add(studentDto);
+            SelectedStudent = new Student();
+            SelectedStudent.BirthsDay = DateTime.Now.AddYears(-14);
+            OnPropertyChanged(nameof(SelectedStudent));
+        }   
 
         [RelayCommand]
-        void DoNewStudent()
+        public void DoNewStudent()
         {
             SelectedStudent = new Student();
+            SelectedStudent.BirthsDay = DateTime.Now.AddYears(-14);
+            OnPropertyChanged(nameof(SelectedStudent));
         }
 
         [RelayCommand]
-        public void DoRemove(Student studentToDelete)
+        public void DoDelete(Student studentDto)
         {
-            Students.Remove(studentToDelete);
-            OnPropertyChanged(nameof(Students));
-        }
-
-        public override async Task InitializeAsync()
-        {
-            if (_studentService is not null)
-            {
-                List<Student> students = await _studentService.SelectAllStudent();
-                Students = new ObservableCollection<Student>(students);
-            }                   
+            Students.Remove(studentDto);
+            SelectedStudent = new Student();
+            SelectedStudent.BirthsDay = DateTime.Now.AddYears(-14);
+            OnPropertyChanged(nameof(SelectedStudent));
         }
     }
 }
