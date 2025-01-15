@@ -11,9 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configuration
-builder.Services.ConfigureCors();
-builder.Services.ConfigureInMemoryContext();
-builder.Services.ConfigureRepos();
+builder.Services.AddBackend();
 
 var app = builder.Build();
 

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Kreta.Backend.Controllers
 {
-    public partial class StudentController : BaseController<Shared.Models.Student, Shared.Dtos.StudentDto>
+    public partial class StudentController : BaseController<Student, StudentDto>
     {
 
         [HttpGet("getstudentbyfullname")]

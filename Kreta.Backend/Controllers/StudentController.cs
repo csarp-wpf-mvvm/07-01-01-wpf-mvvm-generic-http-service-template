@@ -9,7 +9,7 @@ namespace Kreta.Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public partial class StudentController : BaseController<Shared.Models.Student, Shared.Dtos.StudentDto>
+    public partial class StudentController : BaseController<Student, StudentDto>
     {
         private IStudentRepo _studentRepo;
         public StudentController(StudentAssembler? assambler, IStudentRepo? repo) : base(assambler, repo)

@@ -1,19 +1,21 @@
-﻿using Kreta.Backend.Repos.Base;
-using Kreta.Shared.Assemblers;
+﻿using Kreta.Backend.Repos;
+using Kreta.Backend.Repos.Base;
+using Kreta.Shared.Assamblers;
+using Kreta.Shared.Dtos;
 using Kreta.Shared.Models;
 using Kreta.Shared.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Kreta.Backend.Controllers.Base
+namespace Kreta.Backend.Controllers
 {
-    public abstract class BaseController<TModel,TDto> : ControllerBase
-        where TModel : class,IDbEntity<TModel>,new()
-        where TDto : class, new()
+    [ApiController]
+    [Route("api/[controller]")]
+    public class SubjectController : ControllerBase
     {
-        protected Assambler<TModel,TDto> _assambler;
-        protected IBaseRepo<TModel> _repo;
+        protected SubjectAssambler _assambler;
+        protected ISubjectRepo _repo;
 
-        public BaseController(Assambler<TModel, TDto>? assambler, IBaseRepo<TModel>? repo)
+        public SubjectController(SubjectAssambler? assambler, ISubjectRepo? repo)
         {
             _assambler = assambler ?? throw new ArgumentNullException(nameof(assambler));
             _repo = repo ?? throw new ArgumentNullException(nameof(repo));
@@ -29,16 +31,16 @@ namespace Kreta.Backend.Controllers.Base
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllSubjectAsync()
         {
-            var entities = (await _repo.GetAllAsync()).ToList();
-            return Ok(entities.Select(e => _assambler.ToDto(e)));
+            var subjects = (await _repo.GetAllAsync()).ToList();
+            return Ok(subjects.Select(s => _assambler.ToDto(s)));
         }
 
         [HttpPut()]
-        public async Task<ActionResult> UpdateAsync(TDto entitiyDto)
+        public async Task<ActionResult> UpdateAsync(SubjectDto subjectDto)
         {
-            Response response = response = await _repo.UpdateAsync(_assambler.ToModel(entitiyDto));
+            Response response = response = await _repo.UpdateAsync(_assambler.ToModel(subjectDto));
             if (response.HasError)
             {
                 Console.WriteLine(response.Error);
@@ -62,9 +64,9 @@ namespace Kreta.Backend.Controllers.Base
         }
 
         [HttpPost()]
-        public async Task<IActionResult> CreateAsync(TDto entityDto)
+        public async Task<IActionResult> CreateAsync(SubjectDto subjectDto)
         {
-            Response response = await _repo.CreateAsync(_assambler.ToModel(entityDto));
+            Response response = await _repo.CreateAsync(_assambler.ToModel(subjectDto));
             if (response.HasError)
             {
                 Console.WriteLine(response.Error);

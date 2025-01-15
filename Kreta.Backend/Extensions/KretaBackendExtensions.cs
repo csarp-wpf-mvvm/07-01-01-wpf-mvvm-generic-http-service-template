@@ -1,12 +1,21 @@
 ﻿using Kreta.Backend.Context;
 using Kreta.Backend.Repos;
+using Kreta.Shared.Assamblers;
+using Kreta.Shared.Assemblers;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kreta.Backend.Extensions
 {
     public static class KretaBackendExtensions
     {
-        public static void ConfigureCors(this IServiceCollection services)
+        public static void AddBackend(this IServiceCollection services)
+        {
+            services.ConfigureCors();
+            services.ConfigureInMemoryContext();
+            services.ConfigureRepos();
+            services.ConfigureAssamblers();
+        }
+        private static void ConfigureCors(this IServiceCollection services)
         {
 
             services.AddCors(option =>
@@ -21,7 +30,7 @@ namespace Kreta.Backend.Extensions
             );
         }
 
-        public static void ConfigureInMemoryContext(this IServiceCollection services)
+        private static void ConfigureInMemoryContext(this IServiceCollection services)
         {
             string dbNameKretaContext = "Kreta" + Guid.NewGuid();
             services.AddDbContext<KretaContext>
@@ -41,9 +50,17 @@ namespace Kreta.Backend.Extensions
             );
         }
 
-        public static void ConfigureRepos(this IServiceCollection services) 
+        private static void ConfigureRepos(this IServiceCollection services) 
         { 
             services.AddScoped<IStudentRepo, StudentRepo<KretaInMemoryContext>>();
+            services.AddScoped<ISubjectRepo, SubjectRepo<KretaInMemoryContext>>();
+
+        }
+
+        private static void ConfigureAssamblers(this IServiceCollection services)
+        {
+            services.AddScoped<StudentAssembler>();
+            services.AddScoped<SubjectAssambler>();
         }
     }
 }

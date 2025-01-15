@@ -6,6 +6,7 @@ namespace Kreta.Backend.Context
     public class KretaContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
 
         public KretaContext(DbContextOptions<KretaContext> options)
             : base(options)
