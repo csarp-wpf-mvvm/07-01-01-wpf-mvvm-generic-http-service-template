@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Kreta.Desktop.Service;
 using Kreta.Desktop.ViewModels.Base;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -15,8 +14,6 @@ namespace Kreta.Desktop.ViewModels.SchoolCitizens
 
         public SchoolCitizensViewModel()
         {
-            IStudentService studentService = new StudentService(null);
-            _studentViewModel = new StudentViewModel(studentService);
             _parentViewModel = new ParentViewModel();
             _teacherViewModel = new TeacherViewModel();
 

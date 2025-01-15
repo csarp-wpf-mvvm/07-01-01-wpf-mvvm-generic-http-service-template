@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Kreta.Desktop.Models;
-using Kreta.Desktop.Service;
 using Kreta.Desktop.ViewModels.Base;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +10,6 @@ namespace Kreta.Desktop.ViewModels.SchoolCitizens
 {
     public partial class StudentViewModel : BaseViewModelWithAsyncInitialization
     {        
-        private readonly IStudentService? _studentService;
 
         [ObservableProperty]
         private ObservableCollection<string> _educationLevels = new ObservableCollection<string>(new EducationLevels().AllEducationLevels);
